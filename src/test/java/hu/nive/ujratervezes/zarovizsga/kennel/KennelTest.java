@@ -36,7 +36,7 @@ class KennelTest
     }
 
     @Test
-    void testFindByName() {
+    void testFindByName()  {
         Dog dog = kennel.findByName("Morzsi");
         assertTrue(dog instanceof Husky);
         assertEquals("Morzsi", dog.getName());

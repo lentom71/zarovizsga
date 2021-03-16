@@ -2,6 +2,7 @@ package hu.nive.ujratervezes.zarovizsga.kennel;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class Kennel
 {
@@ -20,7 +21,7 @@ public class Kennel
         }
     }
 
-    public Dog findByName(String name) throws Exception
+    public Dog findByName(String name)
     {
         for(Dog kutya: kutyaLista)
         {
@@ -29,7 +30,7 @@ public class Kennel
                 return kutya;
             }
         }
-        throw  new Exception("Nincs ilyen kutya");
+        return  null;
     }
 
     public void playWith(String name, int hours)
