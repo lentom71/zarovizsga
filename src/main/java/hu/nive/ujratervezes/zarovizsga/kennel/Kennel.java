@@ -52,9 +52,13 @@ public class Kennel
             if (kutya.getHappiness() > minHappiness)
             {
                 happyDogs.add(kutya.name);
-
             }
         }
         return happyDogs;
+    }
+
+    public List<Dog> getDogs()
+    {
+        return kutyaLista;
     }
 }
