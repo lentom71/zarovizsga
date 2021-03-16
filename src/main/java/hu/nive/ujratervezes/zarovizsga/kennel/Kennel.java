@@ -39,7 +39,6 @@ public class Kennel
             if (kutya.getName().equals(name))
             {
                 kutya.play(hours);
-
             }
         }
     }
