@@ -17,11 +17,10 @@ public class DogTypes
         this.dataSource = dataSource;
     }
 
-
-
     public List<String> getDogsByCountry(String country)
     {
-        try (Connection conn = dataSource.getConnection()){
+        try (Connection conn = dataSource.getConnection())
+        {
             try (PreparedStatement ps = conn.prepareStatement("SELECT NAME FROM dog_types WHERE country = ?")) {
                 ps.setString(1,country.toUpperCase());
                 ResultSet rs = ps.executeQuery();
@@ -32,9 +31,7 @@ public class DogTypes
         {
             throw new IllegalStateException("Cannot connect: " + sqle.getMessage());
         }
-
     }
-
 
     public  List<String>  listRs(ResultSet rs) throws SQLException
     {
